@@ -1,6 +1,4 @@
-
-
-import React, { Component } from "react";
+import * as React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -8,14 +6,13 @@ import { SafeAreaView, StyleSheet, View, Text , Button, FlatList, TextInput, Tou
 import {Image, Platform, Switch} from 'react-native'
 import { Card } from "react-native-elements";
 import {BoxShadow} from 'react-native-shadow'
+import {MainTabNavigator} from '../Navigation/Navigation'
+import {MainsStackNavigator} from '../Navigation/Navigation'
 
-import DetailsScreen from './DetailsScreen'
-import HomeScreen from './HomeScreen'
 
-
-class SettingsScreen extends React.Component {
-    render(){
-    return (
+export default class SettingsScreen extends React.Component {
+  render(){  
+  return (
       <View style={styles.main}>
               
               <View style={styles.main_container}>
@@ -50,7 +47,6 @@ class SettingsScreen extends React.Component {
     );
   }
 }
-
   
 
   const styles = StyleSheet.create({
@@ -108,5 +104,3 @@ class SettingsScreen extends React.Component {
     fontWeight: 'bold'
   },
   })
-
-export default SettingsScreen  
